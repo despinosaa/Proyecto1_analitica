@@ -178,7 +178,7 @@ def update_prediction_and_financial_analysis(n_clicks, num_bikes, hour, temp, hu
         # Escalar la fecha entre 0 y 1 usando los valores fecha_minima y fecha_maxima
         date_scaled = (selected_date_ordinal - fecha_minima) / (fecha_maxima - fecha_minima)
         
-        data_xgb = data[['Rented Bike Count',"Functioning Day", "Hour", "Temperature(C)", "Rainfall(mm)", "Solar Radiation (MJ/m2)", "Humidity(%)", "Date_scaled", "Holiday", "Seasons_Summer", "Snowfall (cm)"]]
+        #data_xgb = data[['Rented Bike Count',"Functioning Day", "Hour", "Temperature(C)", "Rainfall(mm)", "Solar Radiation (MJ/m2)", "Humidity(%)", "Date_scaled", "Holiday", "Seasons_Summer", "Snowfall (cm)"]]
 
         # Preparar los datos de entrada para la predicción
         input_data = pd.DataFrame({
