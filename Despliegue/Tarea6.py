@@ -2,12 +2,13 @@ import dash
 from dash import dcc, html, Input, Output, State
 import pandas as pd
 import plotly.graph_objs as go
-from sklearn.ensemble import GradientBoostingRegressor
-from sklearn.model_selection import GridSearchCV
 import pickle
+import os
 
-file_name = "despliegue/xgboost_reg.pkl"
-best_model = pickle.load(open(file_name, "rb"))
+script_dir = os.path.dirname(__file__)
+rel_path = "xgboost_reg.pkl"
+abs_file_path = os.path.join(script_dir, rel_path)
+best_model = pickle.load(open(abs_file_path, "rb"))
 
 app = dash.Dash(__name__)
 
